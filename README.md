@@ -1,3 +1,4 @@
-# ECE4564Project1Group31
+# ECE4564P1
 # Created: 10/1/2017
-# Project 1 from Group 31 of ECE 4564 Network Applications
+# Assignment 1 from Group 31 of ECE 4564 Network Applications
+# "forty-two"
