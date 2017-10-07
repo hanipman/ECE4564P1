@@ -34,11 +34,6 @@ if len(myargs.keys()) != 0:
 	print('Invalid arguments')
 	sys.exit()
 
-print(app_id)
-print(server_port)
-print(backlog_size)
-print(socket_size)
-
 host = '172.29.124.160'
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((host, server_port))
@@ -48,13 +43,13 @@ while 1:
 	print('[Checkpoint 02] Listening for client connections')
 	client, address = s.accept()
 
-	print('[Checkpoint 07] Accepted client connection from ' + client + ' on port ' + address)
-	question = client.recv(socket_size)
+	print('[Checkpoint 07] Accepted client connection from ' + str(client) + ' on port ' + str(address))
+	question = client.recv(int(socket_size))
 
-	print('[Checkpoint 09] Received question: ' + question)
+	print('[Checkpoint 09] Received question: ' + str(question))
 	cl = wolframalpha.Client(app_id)
 
-	print('[Checkpoint 10] Sending question to Wolframalpha: ' + question)
+	print('[Checkpoint 10] Sending question to Wolframalpha: ' + str(question))
 	res = cl.query(question)
 
 	answer = next(res.results).text
@@ -69,7 +64,8 @@ while 1:
 		subprocess.run(cmd_beg + answer, stdout=devnull, stderr=devnull, shell=True)
 
 	if answer:
+		answer = answer.replace("_", " ")
 		print('[Checkpoint 13] Sending answer: ' + answer)
-		client.send(answer)
+		client.send(answer.encode())
 
 	client.close()
