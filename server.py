@@ -82,7 +82,7 @@ while 1:
 	# parsing answer for espeak use
 	parsed = re.sub('[^0-9a-zA-Z]+', ' ', answer)
 	print('[Checkpoint 12] Speaking answer parsed for only Alphanumeric and Space characters: ' + parsed)
-	cmd_beg = 'espeak -ven+f3 -k5 -s150 '
+	cmd_beg = 'espeak -ven+m3 -k5 -s150 '
 	cmd_end = ' --stdout | aplay'
 	parsed = parsed.replace(" ", "_")
 
