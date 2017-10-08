@@ -6,7 +6,7 @@
 # "forty-two"
 
 # Initialize server in commandline:
-#	python3 server.py -p <SERVER_PORT> -b <BACKLOG_SIZE> -z <SOCKET_SIZE>
+	python3 server.py -p <SERVER_PORT> -b <BACKLOG_SIZE> -z <SOCKET_SIZE>
 
 # Initialize client in commandline:
 	python3 client.py -s <SERVER_IP> -p <SERVER_PORT> -z <SOCKET_SIZE> -t "<HASHTAG>"
