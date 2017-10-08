@@ -68,6 +68,7 @@ while 1:
 	cl = wolframalpha.Client(app_id)
 
 	# send question to wolframalpha
+	# https://pypi.python.org/pypi/wolframalpha
 	print('[Checkpoint 10] Sending question to Wolframalpha: ' + str(question)[2:-1])
 	res = cl.query(question)
 
