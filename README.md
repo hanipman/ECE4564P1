@@ -13,3 +13,17 @@
 
 # Requires API keys for WolframAlpha and Tweepy in serverKeys.py and clientKeys.py, respectively.	
 
+# imports:
+#	sys 		- allows use of commandline arguments
+#	wolframalpha 	- interface for WolframAlpha API
+#	tweepy		- interface for Twitter API
+#	os 		- allows use of operating system dependent functions
+#	re		- regex for easy string parsing
+#	subprocess	- used to send commands to shell
+#	socket		- used to create network sockets
+#	serverKeys	- contains WolframAlpha API keys
+#	clientKeys	- contains Twitter API keys 
+
+# Chris Boado 	- mainly worked on server.py, so implemeting wolfram and espeak
+# Eric Chandler - mainly worked on client.py, so tweepy
+# Obviously, helped each other out.
